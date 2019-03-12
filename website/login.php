@@ -18,7 +18,7 @@ if(!isset($_POST['username'], $_POST['password'])) {
 $stmt = $connHandle->prepare(
     'SELECT `userid`, `userpass` FROM `user` WHERE `username`=?');
 if($stmt) {
-
+    
     $stmt->bind_param('s', $_POST['username']); //Bind the username string to query.
     $stmt->execute(); //Execute the query.
 

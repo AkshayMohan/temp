@@ -1,0 +1,41 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    background: #dadada;
+}
+.box {
+
+    width: 300px;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: 50px;
+    outline-color: #77eb99;
+    background: #303131;
+    text-align: center;
+    border-radius: 20px;
+}
+.box input[type = "text"], .box input[type = "password"], .box input[type = "cpassword"] {
+
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #77eb99;
+    padding: 14px 10px;
+    width: 200px;
+    height: 20px;
+    outline: none;
+    color: #ffffff;
+    border-radius: 25px;
+    transition: 0.25s;
+}
+.box input[type = "text"]:focus, .box input[type="password"]:focus, .box input[type="cpassword"]:focus {
+
+    width: 250px;
+    border-color: #e49595
+}

@@ -19,6 +19,11 @@ if(!($_POST['password'] === $_POST['cpassword'])) {
 
     die('ERROR : Passwords do not match!');
 }
+$passLen = strlen($_POST['password']);
+if($passLen < 1 || $passLen > 5) {
+
+    die('ERROR : Password length must be in the range of 1-5 characters for quicker bruteforce demonstration.');
+}
 //Check if an account exists!
 $stmt = $connHandle->prepare(
     'SELECT `userid` FROM `user` WHERE `username`=?');
